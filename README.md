@@ -1,4 +1,4 @@
-Alumno: Ruben Marecelo Paredes Morales
+Alumno: Ruben Marcelo Paredes Morales
 # mariadent
 consultorio dental
 darle alegria macarena

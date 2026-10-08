@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mariadent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -14,15 +14,15 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contactanos</a></li>
-            <li><a href="#">Registro clientes</a></li>
-            <li><a href="#">Nosotros</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicio">Servicios</a></li>
+            <li><a href="#contactanos">Contactanos</a></li>
+            <li><a href="#registroCliente">Registro clientes</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
         </ul>
     </nav>
     <main>
-        <section class="fila">
+        <section id="inicio" class="fila">
             <article class="recuadro">
                 <h2>Centro Dental</h2>
                 <p>Tu sonrisa en buenas manos</p>
@@ -30,14 +30,13 @@
                 <p>Cuanto te importa tu apariencia, la presencia de uno es mas valioso que mil palabras,
                     ven ahora no esperes que se caigan tus motes.
                 </p>
-                <a href="#" class="boton">Reserva una cita</a>
             </article>
             <figure class="imagen-lado">
                 <img src="imagen1.jpg" alt="Consulta dental">
             </figure>
         </section>
 
-        <section class="fila">
+        <section id="servicio" class="fila">
             <article class="recuadro">
                 <h3>Profesionales con experiencia</h3>
                 <p>Al alcance de la poblacion</p>
@@ -46,22 +45,41 @@
                 <img src="imagen2.jpg" alt="Equipo dental">
             </figure>
         </section>
-        <section class="fila">
+        <section id="contactanos" class="fila">
             <article class="recuadro">   
                 <h3>Encuentranos</h3>
                 <address><strong>Dirección:</strong> La Paz - Bolivia Villa Alemania C. 2</address>
                 <p>Horario: Lunes a Viernes, de 08:00 a 18:00.</p>
                 <p>WhatsApp: 70652297</p>
+                <a href="#" class="boton">Reserva una cita</a>
             </article>
-
             <figure class="imagen-lado">
                 <img src="imagen3.jpg" alt="Equipo dental">
             </figure>
+            <form>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <label for="celular">Celular</label>
+                <input type="text" id="celular" name="celular" placeholder="70000000" required>
+                <label for="edad">Edad</label>
+                <input type="text" id="edad" name="edad" placeholder="Pon tu edad" required>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Tu mail" required>
+                <select name="informacion" id="informacion">
+                    <option value="extraccion">Realizar una extraccion</option>
+                    <option value="limpieza">Limpieza bucal</option>
+                    <option value="placas">Realizar placa</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="otros">otros</option>
+                </select>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribenos"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
 </body>
 <footer>
-        <p>2026 Mariadent derechos reservados</p>
-        <p>Creado por Ruben Marcelo Paredes Morales</p>
+        <p>2026 Mariadent derechos reservados por Ruben Marcelo Paredes Morales</p>
 </footer>
 </html>

@@ -34,7 +34,11 @@ nav {
 }
 nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px;   
 }
 
 nav ul li {
@@ -231,4 +235,52 @@ footer {
 }
 footer p {
     margin-bottom: 5px;
+}
+@media (max-width: 600px) {
+     #menu-principal ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 15px;
+    }
+    #menu-principal ul li {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+     #menu-principal ul li a {
+        display: block;
+        padding: 5px 0;
+        font-size: 15px;
+    }
+    .fila {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .fila .recuadro,
+    .imagen-lado {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+     .imagen-lado img {
+        height: auto;                
+    }
+     .formulario {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 12px;
+    }
+    .campo-ancho,
+    .formulario button {
+        grid-column: auto;
+    }
+     .recuadro {
+        padding: 16px;
+    }
+
+    /* Main con menos padding */
+    main {
+        padding: 12px;
+    }
 }

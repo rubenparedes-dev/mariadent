@@ -27,7 +27,24 @@ header h1 {
 header p {
     font-size: 16px;
 }
-
+.boton-modo {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #1a1a1a;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.boton-modo:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
 nav {
     background-color: #023e8a;
     padding: 10px 0;
@@ -283,4 +300,76 @@ footer p {
     main {
         padding: 12px;
     }
+}
+.boton-modo {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #1a1a1a;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.boton-modo:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+body.oscuro {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body.oscuro header {
+    background-color: #0a1929;
+    color: #ffffff;
+}
+body.oscuro header p {
+    color: #b0c4d4;
+}
+body.oscuro nav {
+    background-color: #061420;
+}
+body.oscuro nav ul li a {
+    color: #b0b0b0;
+}
+body.oscuro nav ul li a:hover {
+    color: #9bdae5;
+}
+body.oscuro .recuadro {
+    background-color: #1e1e1e;
+    color: #d0d0d0;
+}
+body.oscuro .recuadro h2,
+body.oscuro .recuadro h3 {
+    color: #00b4d8;
+    border-bottom-color: #333;
+}
+body.oscuro .recuadro p {
+    color: #c0c0c0;
+}
+body.oscuro .formulario {
+    background-color: #1e1e1e;
+    color: #d0d0d0;
+}
+body.oscuro .formulario label {
+    color: #00b4d8;
+}
+body.oscuro .formulario input,
+body.oscuro .formulario select,
+body.oscuro .formulario textarea {
+    background-color: #151515;
+    color: #e0e0e0;
+    border-color: #333;
+}
+body.oscuro address {
+    background-color: #151515;
+    color: #c0c0c0;
+}
+body.oscuro footer {
+    background-color: #061420;
+    color: #b0b0b0;
 }

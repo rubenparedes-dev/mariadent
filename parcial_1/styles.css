@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF5E6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #8d4a55;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+nav a {
+    color: rgb(58, 54, 54);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFD166;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}

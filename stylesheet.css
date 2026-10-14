@@ -325,6 +325,19 @@ body.oscuro footer {
     background-color: #061420;
     color: #b0b0b0;
 }
+.aviso {
+    display: none;
+    margin-top: 12px;
+    font-weight: bold;
+}
+.aviso.error {
+    display: block;
+    color: #c0392b;
+}
+.aviso.exito {
+    display: block;
+    color: #27ae60;
+}
 @media (max-width: 600px) {
     #btn-menu {
         display: block;

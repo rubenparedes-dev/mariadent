@@ -18,25 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("abierto");
     }
     botonMenu.addEventListener("click", alternarMenu);
-    const formulario = document.querySelector("#form-pedido");
-    const aviso = document.querySelector("#aviso-form");
-    function revisarFormulario(evento) {
-        evento.preventDefault();
+    const formularioPedido = document.querySelector("#form-pedido");
+    const avisoPedido = document.querySelector("#error-pedido");
+    function revisarPedido(event) {
+        event.preventDefault();
         const nombre = document.querySelector("#nombre").value;
         const correo = document.querySelector("#correo").value;
         if (nombre === "") {
-            aviso.textContent = "Falta tu nombre.";
-            aviso.classList.add("error");
-            aviso.classList.remove("exito");
+            avisoPedido.textContent = "Falta tu nombre, caserito.";
+            avisoPedido.classList.add("error");
+            avisoPedido.classList.remove("exito");
         } else if (correo.includes("@") === false) {
-            aviso.textContent = "Ese correo no parece un correo.";
-            aviso.classList.add("error");
-            aviso.classList.remove("exito");
+            avisoPedido.textContent = "Ese correo no parece correo: le falta el @.";
+            avisoPedido.classList.add("error");
+            avisoPedido.classList.remove("exito");
         } else {
-            aviso.textContent = "Pedido recibido. Te contactamos pronto.";
-            aviso.classList.add("exito");
-            aviso.classList.remove("error");
+            avisoPedido.textContent = "Pedido recibido, caserito. Te contactamos hoy.";
+            avisoPedido.classList.add("exito");
+            avisoPedido.classList.remove("error");
         }
     }
-    formulario.addEventListener("submit", revisarFormulario);
+    formularioPedido.addEventListener("submit", revisarPedido);
 });

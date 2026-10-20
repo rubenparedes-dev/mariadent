@@ -10,5 +10,23 @@
         <h1>Veterinaria Patitas</h1>
         <p>Cuidamos a tu mejor amigo con el cariño y la atención que se merece. Reserva tu turno hoy mismo.</p>
     </header>
+    <main>
+        <section id="reserva-turno">
+            <form id="form-turno" novalidate method="POST" action="procesar.php">
+                <label for="nombre">nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">correo electronico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mascota">contanos de tu mascota:</label>
+                <textarea id="mascota" name="mascota"></textarea>
+
+                <button type="submit">reservar mi turno</button>
+                
+                <p id="aviso-turno" class="aviso"></p>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

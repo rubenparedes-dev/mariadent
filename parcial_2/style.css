@@ -63,3 +63,29 @@ button {
 button:hover {
     background-color: #215c38;
 }
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #888;
+}
+.aviso { 
+    display: none; 
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+.aviso.error { 
+    display: block; 
+    background-color: #ffe6e6;
+    color: #b00020; 
+    border: 1px solid #b00020;
+}
+.aviso.exito { 
+    display: block; 
+    background-color: #e6ffe6;
+    color: #1b7f3b; 
+    border: 1px solid #1b7f3b;
+}

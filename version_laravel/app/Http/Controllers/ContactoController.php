@@ -1,18 +1,14 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-
 class ContactoController extends Controller
 {
     public function inicio(): View
     {
         return view('mariadent');
     }
-
     public function enviar(Request $request): View|RedirectResponse
     {
         $datos = $request->validate([
@@ -26,8 +22,6 @@ class ContactoController extends Controller
             'celular.regex' => 'El celular debe tener 8 dígitos y empezar con 6 o 7.',
             'informacion.required' => 'Debes seleccionar un servicio.',
         ]);
-
-        // Replica procesar.php: muestra los datos, sin almacenarlos.
         return view('contacto-resultado', ['datos' => $datos]);
     }
 }

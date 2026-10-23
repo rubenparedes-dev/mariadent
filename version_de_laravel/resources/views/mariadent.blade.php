@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mariadent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
+</head>
+<body>
+    <header>
+        <!--img src="logo.png" alt="Logo de Mariadent" width="120"-->
+        <h1>Clínica Dental Mariadent</h1>
+        <p>En Mariadent cuidamos tu salud bucal con atención 
+            profesional y personalizada para toda la familia.</p>
+        <button type="button" id="btn-tema" class="boton-modo">☀️ Modo día</button>
+    </header>
+    <nav id="menu-principal">
+        <button type="button" id="btn-menu" class="hamburguesa">☰</button>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicio">Servicios</a></li>
+            <li><a href="#contactanos">Contactanos</a></li>
+            <li><a href="#registroCliente">Registro clientes</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio" class="fila">
+            <article class="recuadro">
+                <h2>Centro Dental</h2>
+                <p>Tu sonrisa en buenas manos</p>
+                <hr>
+                <p>Cuanto te importa tu apariencia, la presencia de uno es mas valioso que mil palabras,
+                    ven ahora no esperes que se caigan tus motes.
+                </p>
+            </article>
+            <figure class="imagen-lado">
+                <img src="{{ asset('img/imagen1.jpg') }}" alt="Consulta dental">
+            </figure>
+        </section>
+
+        <section id="servicio" class="fila">
+            <article class="recuadro">
+                <h3>Profesionales con experiencia</h3>
+                <p>Al alcance de la poblacion</p>
+            </article>
+            <figure class="imagen-lado">
+                <img src="{{ asset('img/imagen2.jpg') }}" alt="Equipo dental">
+            </figure>
+        </section>
+        <section id="contactanos" class="fila">
+            <article class="recuadro">   
+                <h3>Encuentranos</h3>
+                <address><strong>Dirección:</strong> La Paz - Bolivia Villa Alemania C. 2</address>
+                <p>Horario: Lunes a Viernes, de 08:00 a 18:00.</p>
+                <p>WhatsApp: 70652297</p>
+                <a href="#" class="boton">Reserva una cita</a>
+            </article>
+            <form class="formulario" id="form-pedido" action="{{ route('contacto.enviar') }}" method="POST">
+                @csrf
+                @if (session('exito'))
+                    <p class="aviso exito" role="status">{{ session('exito') }}</p>
+                @endif
+                @if ($errors->any())
+                    <div class="aviso error" role="alert">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" value="{{ old('nombre') }}">
+                <label for="celular">Celular</label>
+                <input type="text" id="celular" name="celular" placeholder="70000000" maxlength="8" inputmode="numeric" value="{{ old('celular') }}">
+                <label for="edad">Edad</label>
+                <input type="text" id="edad" name="edad" placeholder="Pon tu edad" value="{{ old('edad') }}">
+                <label for="correo">Correo electrónico</label>
+                <input type="text" id="correo" name="correo" placeholder="Tu mail" value="{{ old('correo') }}">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribenos">{{ old('mensaje') }}</textarea>
+                <select name="informacion" id="informacion">
+                    <option value="">Seleccione una opción</option>
+                    <option value="extraccion" {{ old('informacion') == 'extraccion' ? 'selected' : '' }}>Realizar una extraccion</option>
+                    <option value="limpieza" {{ old('informacion') == 'limpieza' ? 'selected' : '' }}>Limpieza bucal</option>
+                    <option value="placas" {{ old('informacion') == 'placas' ? 'selected' : '' }}>Realizar placa</option>
+                    <option value="consulta" {{ old('informacion') == 'consulta' ? 'selected' : '' }}>Consulta</option>
+                    <option value="otros" {{ old('informacion') == 'otros' ? 'selected' : '' }}>otros</option>
+                </select>
+                <button type="submit">Enviar</button>
+                <p id="error-pedido" class="aviso"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>2026 Mariadent derechos reservados por Ruben Marcelo Paredes Morales</p>
+    </footer>
+    <script src="{{ asset('js/scriptt.js') }}"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Jugueteria El Trompo</title>
+    <link rel="stylesheet" href="{{ asset('css/juguetes.css') }}">
 </head>
 <body>
 

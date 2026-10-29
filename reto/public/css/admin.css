@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    color: #243447;
+    line-height: 1.6;
+}
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+header h1 {
+    font-size: 28px;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+.tarjeta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+h2 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+p {
+    margin-bottom: 15px;
+}
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: #023e8a;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+tbody tr:nth-child(even) {
+    background-color: #f1f7fc;
+}
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+.boton {
+    display: inline-block;
+    background-color: #0077b6;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: #023e8a;
+}
+.boton-salir {
+    background-color: #c0392b;
+}
+.boton-salir:hover {
+    background-color: #922b21;
+}
+.acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+.login-tarjeta {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.campo-login {
+    margin-bottom: 20px;
+}
+
+.campo-login label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo-login input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.campo-login input:focus {
+    outline: none;
+    border-color: #0077b6;
+}
+
+.login-tarjeta form .boton {
+    width: 100%;
+}
+
+.login-tarjeta .acciones {
+    justify-content: center;
+}
+
+.error {
+    color: #c0392b;
+    background-color: #fdecea;
+    padding: 12px;
+    border-radius: 6px;
+}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    .contenedor {
+        width: 100%;
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+    .tarjeta {
+        padding: 18px;
+    }
+    th,
+    td {
+        padding: 9px;
+        font-size: 13px;
+    }
+    .acciones {
+        flex-direction: column;
+    }
+    .boton {
+        text-align: center;
+    }
+}
